@@ -887,6 +887,11 @@ document.addEventListener('DOMContentLoaded', function() {
     if (zoomControl) {
         topLeftContainerDiv.appendChild(zoomControl);
     }
+    //zoom
+    var zoomControl1 = document.getElementsByClassName('ol-zoom')[0]; //controla o zoom nas camadas - colocar 1
+    if (zoomControl1) {
+        topLeftContainerDiv.appendChild(zoomControl1);
+    }
     //geolocate
     var geolocateControl = document.getElementsByClassName('geolocate')[0];
     if (geolocateControl) {
