@@ -883,7 +883,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //move controls inside containers, in order
     //zoom
-    var zoomControl = document.getElementsByClassName('ol-zoom')[0]; //controla o zoom nas camadas - colocar 1
+    var zoomControl = document.getElementsByClassName('ol-zoom')[1]; //controla o zoom nas camadas - colocar 1
     if (zoomControl) {
         topLeftContainerDiv.appendChild(zoomControl);
     }
