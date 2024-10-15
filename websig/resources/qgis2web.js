@@ -934,37 +934,31 @@ function syncminiMap() {
 // Evento que sincroniza o mini mapa quando o principal é movido ou ampliado
 map.on('moveend', syncminiMap);
 
-
-
-// Cria retangulo
-var canvas = document.getElementById("meuCanvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById('meuCanvas');
+const ctx = canvas.getContext('2d');
 
 function ajustarCanvas() {
     // Ajusta o tamanho do canvas para preencher a tela
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    // Desenha o retângulo responsivo
-    desenharRetangulo();
-}
+    // Define o tamanho do quadrado (20% da largura da tela, por exemplo)
+    const tamanhoQuadrado = Math.min(canvas.width, canvas.height) * 0.2;
 
-function desenharRetangulo() {
-    // Limpa o canvas
+    // Limpa o canvas antes de redesenhar
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // Define a cor de preenchimento
-    ctx.fillStyle = white;
+    // Define a cor do preenchimento
+    ctx.fillStyle = rgba(132, 91, 1, 0.2);
 
-    // Desenha o retângulo (ajustando para 50% da largura e altura do canvas)
-    var rectWidth = canvas.width * 0.5; // 50% da largura do canvas
-    var rectHeight = canvas.height * 0.25; // 25% da altura do canvas
-    var x = (canvas.width - rectWidth) / 2; // Centraliza horizontalmente
-    var y = (canvas.height - rectHeight) / 2; // Centraliza verticalmente
-    
-    ctx.fillRect(x, y, rectWidth, rectHeight);
+    // Desenha o quadrado no centro
+    const x = (canvas.width - tamanhoQuadrado) / 2;
+    const y = (canvas.height - tamanhoQuadrado) / 2;
+    ctx.fillRect(x, y, tamanhoQuadrado, tamanhoQuadrado);
 }
 
-// Ajusta o canvas inicialmente e ao redimensionar a janela
+// Redesenha o quadrado quando a janela é redimensionada
 window.addEventListener('resize', ajustarCanvas);
-ajustarCanvas(); // Chama a função pela primeira vez
+
+// Chama a função uma vez para desenhar o quadrado no início
+ajustarCanvas();
