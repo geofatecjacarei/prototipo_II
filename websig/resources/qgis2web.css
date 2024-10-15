@@ -13,34 +13,33 @@ html, body {
 }
 
     /* Ajustes do mini mapa */
-#mini-map {
-    display: flex;
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    width: 150px; 
-    height: 150px;
-    border: 5px solid rgba(189, 249, 130, 0.7);
-    margin-top: 10px;
-    border-radius: 50%;
-    z-index: 1000;
-    box-shadow: 0 13px 145px rgba(0,0,0,0.8);
-    overflow: hidden; 
-}
-
-    /* Ajustes do canvas */
+    #mini-map {
+        display: flex;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        width: 150px; 
+        height: 150px;
+        border: 5px solid rgba(189, 249, 130, 0.7);
+        margin-top: 10px;
+        border-radius: 50%;
+        z-index: 1000;
+        box-shadow: 0 13px 145px rgba(0,0,0,0.8);
+        overflow: hidden; 
+    }
+    /* Ajustes do retangulo */
 #meuCanvas {
-    display: flex;
-    position:absolute;
-    background-color: rgba(132, 91, 1, 0.2);
-    bottom: 50px;
-    right: 50px;
-    width: 25%; 
-    height: 25%;
-    border: 5px dashed #ffbb00;
-    border-radius: 5px;
-    z-index: 2000;
-}
+        display: flex;
+        position:absolute;
+        background-color: rgba(132, 91, 1, 0.2);
+        bottom: 60px;
+        right: 55px;
+        width: 4%; 
+        height: 6%;
+        border: 5px dashed #ffbb00;
+        border-radius: 5px;
+        z-index: 2000;
+    }
 
 #menu {
     width: 100%;
@@ -253,7 +252,7 @@ td video {
 
 
 .ol-zoom {
-	position: relative;
+	position: fixed;
     float: left;
     top: unset;
     left: unset;
@@ -261,14 +260,13 @@ td video {
     margin-left: 8px;
 }
 
-
 /* measurement */
 .measure-control {
 	position: relative;
     float: left;
     top: unset !important;
     left: unset !important;
-    margin-top: 8px;
+    margin-top: 62px;
     margin-left: 8px;
 	display: flex;
 }
@@ -479,5 +477,3 @@ td video {
             display: none; /* Oculta o pop-up em telas muito pequenas 
 }*/
     }
-
-    
