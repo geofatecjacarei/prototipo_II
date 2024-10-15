@@ -14,25 +14,28 @@ html, body {
 
     /* Ajustes do mini mapa */
 #mini-map {
-    position:absolute;
+    display: flex;
+    position: fixed;
     bottom: 10px;
     right: 10px;
-    width: 200px; 
+    width: 150px; 
     height: 150px;
-    border: 5px solid #1F8649;
+    border: 5px solid rgba(189, 249, 130, 0.7);
     margin-top: 10px;
-    border-radius: 5px;
+    border-radius: 50%;
     z-index: 1000;
+    box-shadow: 0 13px 145px rgba(0,0,0,0.8);
+    overflow: hidden; 
 }
 
     /* Ajustes do retangulo */
 #meuCanvas {
     display: flex;
-    position:absolute;
+    position:fixed;
     background-color: rgba(132, 91, 1, 0.2);
     bottom: 60px;
-    right: 70px;
-    width: 5%; 
+    right: 60px;
+    width: 6%; 
     height: 6%;
     border: 5px dashed #ffbb00;
     border-radius: 5px;
