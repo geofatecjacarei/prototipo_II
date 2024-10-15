@@ -29,8 +29,7 @@ html, body {
     }
     /* Ajustes do retangulo */
 #meuCanvas {
-        display: flex;
-        position:absolute;
+        position: absolute;
         background-color: rgba(132, 91, 1, 0.2);
         bottom: 60px;
         right: 55px;
