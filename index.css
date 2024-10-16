@@ -25,6 +25,8 @@ body {
     text-shadow: 2px 0 15px #033b1389;
     width: 100%;
     padding: 10px;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
 }
 
 #corpo {
