@@ -29,7 +29,8 @@ html, body {
     }
     /* Ajustes do retangulo */
 #meuCanvas {
-        position: absolute;
+   	display: flex;
+        position:absolute;
         background-color: rgba(132, 91, 1, 0.2);
         bottom: 60px;
         right: 55px;
@@ -60,11 +61,11 @@ html, body {
     background-color: #BDF982;
     color:#1F8649;
     padding: 15px;
-	border-radius: 10px;
+    border-radius: 10px;
     bottom: 5px;
     left: 25%;
     transform: translateX(-50%);
-	box-shadow: 0 3px 14px rgba(0,0,0,0.4);
+    box-shadow: 0 3px 14px rgba(0,0,0,0.4);
 }
 
 .ol-popup:after, .ol-popup:before {
